@@ -34,7 +34,7 @@ WORKDIR $GOPATH
 
 # install gosu
 # https://github.com/tianon/gosu/blob/master/INSTALL.md#from-centos
-ENV GOSU_VERSION 1.10
+ENV GOSU_VERSION 1.11
 RUN set -ex && \
 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" && \
 	wget -O /usr/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch" && \
